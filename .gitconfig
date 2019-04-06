@@ -79,6 +79,9 @@
 		fi \
 	}; f"
 
+	# Show list of conflict files
+	conflicts = diff --name-only --diff-filter=U
+
 [apply]
 
 	# Detect whitespace errors when applying a patch
@@ -135,7 +138,7 @@
 [commit]
 
 	# https://help.github.com/articles/signing-commits-using-gpg/
-	gpgsign = true
+	#gpgsign = true
 
 [diff]
 
@@ -185,3 +188,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
+##[gpg]
+##	program = gpg1
+[user]
+	name = Viraj Soni
+	email = viraj.viraaj@gmail.com
