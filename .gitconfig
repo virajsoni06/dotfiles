@@ -137,8 +137,8 @@
 
 [commit]
 
-	# https://help.github.com/articles/signing-commits-using-gpg/
-	# gpgsign = true
+	## https://help.github.com/articles/signing-commits-using-gpg/
+	#gpgsign = true
 
 [diff]
 
@@ -188,8 +188,8 @@
 [url "git://gist.github.com/"]
 
 	insteadOf = "gist:"
-##[gpg]
-##	program = gpg1
+[gpg]
+	program = gpg1
 [user]
 	name = Viraj Soni
 	email = viraj.viraaj@gmail.com
