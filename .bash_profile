@@ -50,3 +50,9 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # Add nvm
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
+
+# Add MAMP
+export PATH="/Applications/MAMP/Library/bin:$PATH"
+
+# Default Python version
+alias python='python3'
