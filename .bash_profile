@@ -56,3 +56,14 @@ export PATH="/Applications/MAMP/Library/bin:$PATH"
 
 # Default Python version
 alias python='python3'
+
+# Default PIP version
+alias pip='/usr/local/bin/pip3'
+
+# Set PHP version
+PHP_VERSION=$(ls /Applications/MAMP/bin/php/ | sort -n | tail -1)
+
+export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+
+# Add Bench
+export PATH="/Users/viraj/Library/Python/3.7/bin/:$PATH"
