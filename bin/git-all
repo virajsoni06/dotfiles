@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+REPOS=./*/.git
+
+function resolvePath() {
+  if [ "$(uname)" == "Darwin" ]; then
+    greadlink -m $1
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+    readlink -m $1
+  fi
+}
+
+for r in $REPOS; do
+  repo=`resolvePath $r/..`
+  echo "${repo} -----> git $@"
+  pushd $repo > /dev/null
+  git $@
+  popd > /dev/null
+done

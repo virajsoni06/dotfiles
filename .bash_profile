@@ -63,7 +63,30 @@ alias pip='/usr/local/bin/pip3'
 # Set PHP version
 PHP_VERSION=$(ls /Applications/MAMP/bin/php/ | sort -n | tail -1)
 
-export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+# export PATH=/Applications/MAMP/bin/php/${PHP_VERSION}/bin:$PATH
+export PATH=/Applications/MAMP/Library/bin:/Applications/MAMP/bin/php/php7.4.2/bin:$PATH
 
 # Add Bench
 export PATH="/Users/viraj/Library/Python/3.7/bin/:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/viraj/google-cloud-sdk/path.bash.inc' ]; then . '/Users/viraj/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/viraj/google-cloud-sdk/completion.bash.inc' ]; then . '/Users/viraj/google-cloud-sdk/completion.bash.inc'; fi
+
+# Add git-all path for Edu Games Repo
+# export PATH="/Applications/MAMP/htdocs/edu-games-plus/:$PATH"
+
+# fylctl command line path
+export FLYCTL_INSTALL="/Users/viraj/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+export BUN_INSTALL="$HOME/.bun" 
+export PATH="$BUN_INSTALL/bin:$PATH" 
+
+export DENO_INSTALL="/Users/viraj/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
+source /Users/viraj/.docker/init-bash.sh || true # Added by Docker Desktop
+
+export PATH="/Users/viraj/.local/share/solana/install/active_release/bin:$PATH"
